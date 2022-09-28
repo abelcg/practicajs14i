@@ -165,8 +165,5 @@ console.log(arrayWord.includes(5))
 
 console.log(arrayWord.includes('a'))
 
-/* 
-Problema: pedir por pantalla el nombre de 5 alumnos de un curso, usando bucle while.
-Guardarlos en un arreglo llamado alumnos
-mostrar por consola por cada uno un saludo de bienvenida 
-*/
+
+
