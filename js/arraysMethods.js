@@ -108,9 +108,11 @@ let sum = numbers.reduce((resultado, actual)=> {
 console.log(sum)
 
 
-//encontrar elemntos unicos con reduce
+//encontrar elementos unicos con reduce
 
-const array = ["🐑", 1, 2, "🐑", "🐑", 3, "4"];
+const array = [18, 8, 9, 18, 18, 3, "4"];
+
+console.log(array.indexOf(18))
 
 const array2 = [1,2,3,5,1]
 
@@ -127,8 +129,24 @@ console.log(uniqueArray)
 
 //encontrar unicos con filter
 
-let uniqueArray4 = array.filter((item, index) => array.indexOf(item) === index);
+const array3 = [18, 8, 9, 18, 18, 3, "4"];
+
+let uniqueArray4 = array.filter((item, index) => array3.indexOf(item) === index);
 
 console.log(uniqueArray4)
 
+
+//encontrar elemntos unicos de un arrya usando set
+
+let dupeArray = [1, 1, 4, 5, 4, 4, 2, 1, 5];
+
+
+let uniqueArray5 = Array.from(new Set(dupeArray));
+
+
+let uniqueArray2 = [...new Set(dupeArray)];
+
+console.log(uniqueArray5);
+
+console.log(uniqueArray2);
 

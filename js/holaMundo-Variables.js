@@ -60,8 +60,6 @@ let falso = false;
 
 console.log(!verdadero) // operador de negación
 
-
-//
 let comision = "14i";
 
 document.write("<br>Comision:" + comision)
