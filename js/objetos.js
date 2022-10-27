@@ -15,7 +15,21 @@ let funkoIronMan = {
     nroSerie : "123abc",
     precio : 5500,
     version : "end-game",
+    //metodos
+
+    sinStock: function(){
+        return false;
+    },
+
+    disponible(){
+        return false;
+    }
 }
+
+//llamar o invocar un método nombreObjeto.metodo()
+
+console.log(funkoIronMan.disponible())
+
 
 //mostrar el objeto en consola
 console.log(funkoIronMan)
@@ -25,17 +39,19 @@ console.log(funkoIronMan)
 
 //mostrar una propiedad del objeto. Forma 1: nombreObjeto.propiedad
 
-//document.write("Producto FunkoIronMan<br>" + funkoIronMan.nombre)
+document.write("Producto FunkoIronMan<br>" + funkoIronMan.nombre)
 
 //mostrar una propiedad del objeto. Forma 2: nombreObjeto['propiedad']
 
-//document.write("<br>Precio: " + funkoIronMan['precio'])
+document.write("<br>Precio: " + funkoIronMan['precio'])
 
 //si queremos utilizar un for..of para iterar el objeto --> nos dirá que el objeto no es iterable
 // se puede usar en cambio un for..in
 
+document.write('<h5> FunkoIronMan </h5>')
+
 for(const prop in funkoIronMan){
-   // document.write(`<br><br> ${prop} : ${funkoIronMan[prop]}`)
+   document.write(`<br> ${prop} : ${funkoIronMan[prop]}`)
 }
 
 //mostrar un objecto usando un bucle for tradicional 
@@ -46,13 +62,13 @@ const mostrarObjecto = ()=>{
     console.log(claves);
     console.log(claves.length);
 
-   // document.write("<br><br>Funko Iron Man")
+    document.write("<br><br>Funko Iron Man")
    
     for (let i=0; i<claves.length; i++){
         let clave = claves[i] //obtengo el nombre de c/u de las claves por cada vuelta
         let valor = funkoIronMan[clave]
-       // document.write(`<br> ${clave} : ${valor}`)
-        console.log(`${clave} : ${valor}`)
+        document.write(`<br> ${clave} : ${valor}`)
+        //console.log(`${clave} : ${valor}`)
     }
 }
 
@@ -85,3 +101,24 @@ Object.entries(funkoIronMan).map(entry =>{
     const [key, value] = entry
     console.log(key, value)
 })
+
+
+
+//modificar una propiedad
+funkoIronMan.precio = 6000
+
+funkoIronMan.version = "Iron Man 2"
+
+mostrarObjecto()
+
+//agregar una nueva propiedad al obj
+
+funkoIronMan.tamaño = ['pequeño', 'mediano', 'grande']
+
+mostrarObjecto()
+
+//borrar una nueva propiedad del obj
+
+delete funkoIronMan.version
+
+mostrarObjecto()

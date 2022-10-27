@@ -1,4 +1,4 @@
-//switch reemplaza a los if else cuando teens varios de estos
+//switch reemplaza a los if else cuando tenes varios de estos
 // Cauando tenemos condiciones a evaluar
 
 /* 
